@@ -1,10 +1,10 @@
 from tkinter import *
-import backend
+from backend import Database
 
 window = Tk()
 
 window.wm_title("BookStore")
-
+db = Database("books.db")
 def get_selected_row(event):
     global selected_tuple
     index= list1.curselection()[0]
@@ -19,24 +19,24 @@ def get_selected_row(event):
     e4.insert(END, selected_tuple[4])
 
 def view_command():
-    for row in backend.view():
+    for row in db.view():
         list1.insert(END, row)
 
 def search_command():
     list1.delete(0,END)
-    for row in backend.search(title_text.get(), author_text.get(), year_text.get(), isbn_text.get()):
+    for row in db.search(title_text.get(), author_text.get(), year_text.get(), isbn_text.get()):
         list1.insert(END, row)
 
 def add_command():
-    backend.insert(title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
+    db.insert(title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
     list1.delete(0, END)
     list1.insert(END, (title_text.get(), author_text.get(), year_text.get(), isbn_text.get()))
 
 def delete_command():
-    backend.delete(selected_tuple[0])
+    db.delete(selected_tuple[0])
 
 def update_command():
-    backend.update(selected_tuple[0], title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
+    db.update(selected_tuple[0], title_text.get(), author_text.get(), year_text.get(), isbn_text.get())
 
 l1 = Label(window, text="Title")
 l1.grid(row=0, column=0)
