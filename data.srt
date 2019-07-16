@@ -1,0 +1,231 @@
+Hi again. 
+I am Ilkay Altinas. Just like Leo, I'd like to tell you
+
+ a little bit about my work here 
+at the San Diego Supercomputer Center
+
+ 
+and UC San Diego.
+
+ 
+You might even think, what does a supercomputer center
+
+ 
+have to do with data science? Let me tell you.
+
+ 
+As you might have heard, there are many different, 
+
+exciting applications that are being enabled 
+by data science in the big data era.
+
+ I am the Chief Data Science Officer at SDSC,
+
+ 
+leading our collaborative 
+data science hub activities.
+
+ 
+At the same time, I lead our research development 
+and education division,
+
+ 
+where I oversee many exciting research programs.
+And a role that I am passionate about 
+is my research center for data science workflows,
+
+ 
+which I built over time as an area since the year 
+which has been a 
+joint SDSC at UC San Diego. In terms of some of my education activities,
+
+ 
+I'm the Faculty Co-Director
+
+ 
+for the Master of Advanced Studies Program
+
+ 
+on Data Science 
+and Engineering here at UC San Diego, 
+in which I teach a capstone project course.
+
+ 
+I also work as a lecturer
+
+ 
+for the Computer Science and Engineering Department 
+
+and have done big data courses
+
+ as part of other online and offline course programs.
+
+ What is common to all these roles
+
+ is that I work on interdisciplinary research
+As a part of my core research development
+
+ 
+and teaching activities, I work on building methodologies
+
+ 
+and tools to make big data, data science,
+
+ and computational 
+science useful 
+to dynamic, data-driven scientific applications. 
+I work with many UC San Diego centers in these areas.
+
+ 
+My colleagues and I work on many Grand 
+Challenge 
+data science applications in all areas 
+of science and engineering, including genomics,
+
+ 
+geoinformatics, metro data science or smart cities,
+
+
+energy management, 
+biomedicine, personalized health, and many others as part of our data science hub. 
+What is common to all these applications 
+is their unique way of bringing together 
+
+new modes of data and computing research. 
+So it's all about collaboration
+
+ 
+and what the supercomputer center brings to it 
+as the computing and data management expertise.
+
+
+So what do I do on a regular day,
+
+ is to think about how I can get a group of very smart people
+
+ 
+collaborate to solve data science challenges.
+
+ 
+I worry about questions like,
+
+
+how do we close the loop on data science methods, 
+tools, computing and data systems, and domain experts? These questions also get translated to research challenges 
+and toolboxes for data science by my research group.
+
+ Our main goal is methodology and tool development
+
+ 
+to build automated and operational workflow-driven
+
+ 
+solution 
+architectures on big data and high performance computing platforms.
+
+ This applies to many scientific disciplines. 
+Let me tell you a project we work on as a part 
+of many 
+of these applications. 
+It is for wildfire analytics,
+
+ 
+which breaks up into two components: 
+prediction and emergency response. 
+WIFIRE is a collaborative project
+
+ 
+funded 
+by the National Science Foundation
+
+ 
+to build a cyberinfrastructure for wildfire monitoring, 
+prediction, and resilience.
+
+ 
+It's a research project, which lead to very 
+useful insights.
+
+ 
+In WIFIRE, we built a scalable cyberinfrastructure
+
+ 
+that can utilize any high-end computing,
+
+ 
+cloud and big data platform,
+
+ 
+for dynamic big data fire 
+modeling and prediction.
+
+ 
+The approach here is to use real-time data
+
+ to learn about the dynamics of fire behavior
+
+ 
+and environment, and using data science techniques,
+
+assimilate what we have learned into a fire model 
+to adopt to changes in the situation over time. 
+Here, data science methods and workflows 
+were used for system integration
+
+ 
+
+and dynamic application scalability. All the data, models, and computing systems 
+being used for data before WIFIRE, 
+but a programmable system integration that can match the 
+application needs we're lacking.
+Data science enables such computing capabilities 
+to become available to fire response, research,
+
+ 
+and planning communities.
+
+ 
+In fact, the system 
+is being used
+
+ as a special awareness tool by some fire departments 
+already and we are really happy about that.
+
+ But WIFIRE represents a wide range of applications
+
+ 
+
+where real-time big data can be assimilated 
+with modeling and simulation tools 
+for better situational awareness
+
+ 
+and dynamic decision support. Just take a moment to 
+imagine how data science
+
+ will help with firefighting in the future. Many streams of data will come together in 3-D displays 
+that can show all the related information 
+
+along with weather and fire predictions.
+
+ 
+That would be a great application of data science with societal impact.
+
+ 
+Needless to say, none of this would be possible
+
+ 
+without 
+the collaboration of many individuals, 
+showing how important interdisciplinary collaboration is 
+to data science.
+
+ 
+Hope you enjoyed hearing about what I do. 
+And I'm looking 
+forward to sharing 
+some exciting data science use cases with you
+
+ 
+over the next 10 weeks.
+
