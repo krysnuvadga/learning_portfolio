@@ -4,8 +4,12 @@ def insectionSort(arr):
         position = i
 
         while position > 0 and arr[position-1] > cursor:
+
+            # Swap the number down the list
             arr[position] = arr[position-1]
             position = position-1
+
+        # Break and do the final swap
         arr[position] = cursor
     print("Sorted array is:")
     for i in range(len(arr)):
