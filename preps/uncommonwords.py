@@ -9,6 +9,7 @@ My approach:
 2. Remove unwanted characters from the text input.
 3. Compare the two list and remove common words from the list generated from f2.txt
 4. sorting words in the list generated from f2.txt by frequency
+
 '''
 
 if len(sys.argv) != 3:
@@ -27,4 +28,4 @@ final_set = set(passage_text) - set(common_words) # Comparing the lists using se
 word_count = Counter([w for w in passage_text if w in final_set])
 
 for word, count in sorted(word_count.items(), key=lambda k: -k[1]):
-    print(word, ":", count)
+    print(word, " : ", count)
