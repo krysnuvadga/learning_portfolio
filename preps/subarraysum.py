@@ -1,92 +1,73 @@
-# METHOD 1
-# Returns true if the
-# there is a subarray
-# of arr[] with sum
-# equal to 'sum'
-# otherwise returns
-# false. Also, prints
-# the result
-def subArraySum(arr, n, sum):
+'''A naive approach to this problem would be to loop through each number
+and then loop again through the array looking for a pair that sums to S.
+The running time for the below solution would be O(n2) because in the worst
+case we are looping through the array twice to find a pair. '''
 
-    # Pick a starting
-    # point
-    for i in range(n):
-        curr_sum = arr[i]
+ """For example, if the array is [3, 5, 2, -4, 8, 11] and the sum is 7,
+ your program should return [[11, -4], [2, 5]] because 11 + -4 = 7 and 2 + 5 = 7."""
+# our two sum function which will return
+# all pairs in the list that sum up to S
+def twoSum(arr, S):
 
-        # try all subarrays
-        # starting with 'i'
-        j = i+1
-        while j <= n:
+  sums = []
 
-            if curr_sum == sum:
-                print ("Sum found in the sub subarray")
-                print(arr[i:j])
+  # check each element in array
+  for i in range(0, len(arr)):
 
-                return 1
+    # check each other element in the array
+    for j in range(i+1, len(arr)):
 
-            if curr_sum > sum or j == n:
-                break
+      # determine if these two elements sum to S
+      if (arr[i] + arr[j] == S):
+        sums.append([arr[i], arr[j]])
 
-            curr_sum = curr_sum + arr[j]
-            j += 1
+  # return all pairs of integers that sum to S
+  return sums
 
-    print ("No subarray found")
-    return 0
+print twoSum([3, 5, 2, -4, 8, 11], 7)
 
-# METHOD 2
-# Returns true if the
-# there is a subarray
-# of arr[] with sum
-# equal to 'sum'
-# otherwise returns
-# false. Also, prints
-# the result.
-def subArraySum_(arr, n, sum): 
 
-    # Initialize curr_sum as
-    # value of first element
-    # and starting point as 0
-    curr_sum = arr[0]
-    start = 0
 
-    # Add elements one by
-    # one to curr_sum and
-    # if the curr_sum exceeds
-    # the sum, then remove
-    # starting element
-    i = 1
-    while i <= n:
+#OR
 
-        # If curr_sum exceeds
-        # the sum, then remove
-        # the starting elements
-        while curr_sum > sum and start < i-1:
 
-            curr_sum = curr_sum - arr[start]
-            start += 1
+'''We can write a faster algorithm that will find pairs that sum to S in linear time.
+The algorithm below makes use of hash tables which have a constant lookup time.
+As we pass through each element in the array, we check to see if S minus the current
+element exists in the hash table. We only need to loop through the array once, resulting
+in a running time of O(n) since each lookup and insertion in a hash table is O(1).'''
 
-        # If curr_sum becomes
-        # equal to sum, then
-        # return true
-        if curr_sum == sum:
-            print ("Sum found between indexes")
-            print ("%d and %d"%(start, i-1))
-            return 1
+"""If the array is: [4, 5, 1, 8] and the sum is 6 the algorithm would proceed with the steps below:
 
-        # Add this element
-        # to curr_sum
-        if i < n:
-            curr_sum = curr_sum + arr[i]
-        i += 1
+(1) The hash table is initially empty and the first element in the array is 4. We simply put 4 into the hash table.
 
-    # If we reach here,
-    # then no subarray
-    print ("No subarray found")
-    return 0
+(2) The next element is 5. We check to see if the sum minus the current element exists in the hash table. 6 - 5 = 1 does not exist in the hash table. So add 5 to the hash table.
 
-# Driver program
-arr = [15, 2, 4, 8, 9, 5, 10, 23]
-n = len(arr)
-sum = 23
+(3) The next element is 1. We check to see if the sum minus the current element exists in the hash table. 6 - 1 = 5 does exist in the hash table so we found a pair!
+"""
 
-subArraySum(arr, n, sum)
+# our two sum function which will return
+# all pairs in the list that sum up to S
+def twoSum(arr, S):
+
+  sums = []
+  hashTable = {}
+
+  # check each element in array
+  for i in range(0, len(arr)):
+
+    # calculate S minus current element
+    sumMinusElement = S - arr[i]
+
+    # check if this number exists in hash table
+    # if so then we found a pair of numbers that sum to S
+    if sumMinusElement in hashTable:
+      sums.append([arr[i], sumMinusElement])
+
+    # add the current number to the hash table
+    hashTable[arr[i]] = arr[i]
+
+  # return all pairs of integers that sum to S
+  return sums
+
+print twoSum([3, 5, 2, -4, 8, 11], 7)   
